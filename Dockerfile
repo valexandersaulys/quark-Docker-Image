@@ -14,7 +14,7 @@ COPY --from=build /code /quark
 RUN mkdir /html
 # mount to /html
 # VOLUME ["/html"]   
-EXPOSE 80
-CMD ["./quark", "-h", "0.0.0.0", "-p", "80", "-d", "/html"]
+# EXPOSE 80
+# CMD ["./quark", "-h", "0.0.0.0", "-p", "80", "-d", "/html"]
 
 
