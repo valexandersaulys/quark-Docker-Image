@@ -3,7 +3,7 @@
 To Run:
 
 ```bash
-docker run --expose 8081 -e PORT=8081 -p 8080:8081 -v /tmp/html:/html vasaulys/quark
+docker run --expose 8081 -e PORT=8081 -p 8080:8081 -v /tmp/html:/html vasaulys/quark-server
 ```
 
 Meant for usage with
