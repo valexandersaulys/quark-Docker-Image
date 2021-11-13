@@ -1,8 +1,10 @@
 FROM alpine AS build
 RUN mkdir /code
-RUN apk --no-cache add git build-base
+RUN apk --no-cache add git build-base sed
 WORKDIR /code
 RUN git clone https://git.suckless.org/quark ./
+# Add javascript mime type                                                                                     
+RUN sed -i 's/} mimes\[\] = {/&\n { "js",   "application\/javascript; charset=utf-8" },/' config.def.h                                                                                            
 RUN make
 RUN make install all
 
